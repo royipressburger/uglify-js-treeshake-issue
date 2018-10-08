@@ -1,7 +1,10 @@
 {
   "name": "inline-project",
   "sideEffects": [
-    "*.scss"
+    "*.scss",
+    "./src/Bubbles.jsx",
+    "d3-transition",
+    "./node_modules/d3-selection/dist/d3-selection.min.js"
   ],
   "version": "1.0.0",
   "description": "",

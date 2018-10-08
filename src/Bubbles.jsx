@@ -11,7 +11,7 @@ import map from 'ramda/es/map';
 import prop from 'ramda/es/prop';
 import { withFauxDOM } from 'react-faux-dom';
 import { scaleSqrt, scaleLinear } from 'd3-scale';
-import { select as d3Select } from 'd3-selection';
+import * as select from 'd3-selection';
 import { pack, hierarchy } from 'd3-hierarchy';
 import { interpolateRgb } from 'd3-interpolate';
 import 'd3-transition';
@@ -73,7 +73,7 @@ class Bubbles extends React.Component {
       .padding(this.props.bubblePadding);
 
     // Faux Dom
-    const svg = d3Select('svg')
+    const svg = select.select('svg')
       .attr('viewBox', `0 0 ${this.props.width} ${this.props.height}`)
       .attr('width', this.props.width)
       .attr('height', this.props.height)
